@@ -3,4 +3,4 @@
 <?php   echo '<h3> Profil - Toto23 </h3>'; ?>
 <?php   echo '<p>';?>	Nom : Mougin <?php echo $this->Html->image('modif.jpg');?> <?php echo'</p>'; ?>
 <?php   echo '<p> Prénom : Louis '.$this->Html->image("modif.jpg").'</p>';?>
-<?php   echo '<p><tr> Age : 22 '.$this->Html->image("modif.jpg").'</p>';?>
+<?php   echo '<p> Age : 22 '.$this->Html->image("modif.jpg").'</p>';?>
