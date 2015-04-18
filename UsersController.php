@@ -1,16 +1,26 @@
 <?php 
-class UsersController extends AppController {
+class UsersController  extends AppController {
+	public $scaffold;
 	
-	public function profil()
+	/*function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('profil');
+	}*/
+	
+	public function profil($user)
 	{
 		
-		//$id = $this->Auth->user('id');
 		$id = $this->User->find('all',array(
-		'fields'=>array('username','email','age')));
-		$avertissement = "Vous avez été déconnecté";
-	
+		'conditions' => array('username' => $user),
+		'fields'=>array('username','email','age')
+		));
+		//$avertissement = "Vous avez été déconnecté";
 			$this->set('test',$id);	
 		
-	}	
-
+	}
+	
+	public function monprofil()
+	{
+	}
+	
 }
